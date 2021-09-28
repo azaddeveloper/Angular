@@ -1,9 +1,9 @@
 # Angular
-What is Angular?
+# What is Angular?
   Angular is an open-source web application development framework created by Google. It is used to build frontend, single-page applications that run on JavaScript. It is a full-
   fledged framework, i.e., it takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
-What is the difference between @ViewChild() and @ContentChild()
-How would you insert an embedded view from a prepared TemplateRef?
+# What is the difference between @ViewChild() and @ContentChild()
+# How would you insert an embedded view from a prepared TemplateRef?
 Explain the difference between Constructor and ngOnInit
   The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses.
   ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
