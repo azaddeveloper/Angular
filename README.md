@@ -4,7 +4,7 @@
   fledged framework, i.e., it takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
 # What is the difference between @ViewChild() and @ContentChild()
 # How would you insert an embedded view from a prepared TemplateRef?
-Explain the difference between Constructor and ngOnInit
+# Explain the difference between Constructor and ngOnInit
   The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses.
   ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
   implementing OnInit is not mandatory but considered good practice).
@@ -15,7 +15,6 @@ Explain the difference between Constructor and ngOnInit
   components or pipes are only matched against the HTML if they are declared or imported.
   providers are to make services and values known to DI. They are added to the root scope and they are injected to other services or directives that have them as dependency.
 # How to detect a route change in Angular?  
-  Ans : 
   class MyClass {
     constructor(private router: Router) {
         router.subscribe((val) => /*whatever*/ )
@@ -105,13 +104,13 @@ Explain the difference between Constructor and ngOnInit
 
   component uses @Component decorator, directive uses @Directive decorator
   component has template, directive has not  
-Forms Questions:
-When do you use template driven vs model driven forms? Why?
+# Forms Questions:
+# When do you use template driven vs model driven forms? Why?
 # How do you submit a form?
-What's the difference between NgForm, FormGroup, and FormControl? # How do they work together?
-What's the advantage of using FormBuilder?
+# What's the difference between NgForm, FormGroup, and FormControl? # How do they work together?
+# What's the advantage of using FormBuilder?
 # How do you add form validation to a form built with FormBuilder?
-What's the difference between dirty, touched, and pristine on a form element?
+# What's the difference between dirty, touched, and pristine on a form element?
 # How can you access validation errors in the template to display error messages?
 # What is async validation and # how is it done?
 # What is the correct form control class name which is set to true when value is modified?
