@@ -3,7 +3,10 @@
   Angular is an open-source web application development framework created by Google. It is used to build frontend, single-page applications that run on JavaScript. It is a full-
   fledged framework, i.e., it takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
 # What is the difference between @ViewChild() and @ContentChild()
+  As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, whereas @ViewChild 
+  and @ViewChildren only look at elements that are on your view template directly.
 # How would you insert an embedded view from a prepared TemplateRef?
+  we can create an embedded view using createEmbeddedView method then attach that view to the DOM via ViewContainerRef:
 # Explain the difference between Constructor and ngOnInit
   The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses.
   ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
@@ -105,16 +108,20 @@
   that flows from a publisher to a subscriber through a well-defined path with multiple operations transforming the data along the way.
 # What is RxJS?
 # What is the difference between an observable and a subject?
+  While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast. A Subject is like an Observable, but 
+  can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
 # How would you cache an observable data?
 
 # What do you mean by dependency injection?
 # What is server-side rendering in Angular?
 # What is Angular Universal?
 # What are HttpInterceptors in Angular?
-# What is the difference between a component and a directive?
+  Interceptors are a unique type of Angular Service that we can implement. Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient 
 # How to create two way data binding in Angular?
   https://github.com/Yonet/Angular-Interview-Questions/blob/main/components.md
 # What is the difference between a component and a directive?
+  Component is used to break up the application into smaller components. But Directive is used to design re-usable components, which is more behavior-oriented. That is why   
+  components are widely used in later versions of Angular to make things easy and build a total component-based model.
   There are three kinds of directives in Angular:
 
   components - directive with a template
