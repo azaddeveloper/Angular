@@ -10,13 +10,14 @@
   implementing OnInit is not mandatory but considered good practice).
 # What is AOT?
 # What is difference between declarations, providers and import in NgModule?
-  imports makes the exported declarations of other modules available in the current module
+  imports are used to import supporting modules like FormsModule, RouterModule, CommonModule, or any other custom-made feature module.
   
-  declarations are to make directives (including components and pipes) from the current module available to other directives in the current module. Selectors of directives, 
+  declarations are used to declare components, directives, pipes that belong to the current module. Everyone inside declarations knows each other. 
   
   components or pipes are only matched against the HTML if they are declared or imported.
-  
-  providers are to make services and values known to DI. They are added to the root scope and they are injected to other services or directives that have them as dependency.
+
+  Providers are used for injecting the services required by components, directives, pipes in the module.
+
 # How to detect a route change in Angular?  
   class MyClass {
     constructor(private router: Router) {
