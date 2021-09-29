@@ -81,10 +81,8 @@
   The full form of DOM is Document Object Model, and it is responsible for representing the content of a web page and changes in the architecture of an application. Here, all 
   the objects are organized in the form of a tree, and the document can easily be modified, manipulated, and accessed only with the help of APIs.
 # What are services in Angular?
-  A service in Angular is a term that covers broad categories of functionalities. A service is any value, function, or feature that an app needs. A service is typically used to 
-  accomplish a very narrow purpose such as HTTP communication, sending data to a cloud service, decoding some text, validating data, etc. A service does one thing and does it 
-  well. It is different from a component as it is not concerned with HTML or any other kind of presentation logic. Normally, a component uses multiple services to accomplish 
-  multiple tasks.
+  The main objective of a service is to organize and share business logic, models, or data and functions with different components of an Angular application.
+ 
 # What is a two-way data binding?
   Two-way data binding is done in Angular to ensure that the data model is automatically synchronized in the view. For example, when a user updates some data in a model and that 
   model is being displayed in multiple places in a component, that update should be reflected in all the places  
