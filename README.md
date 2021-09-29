@@ -56,16 +56,27 @@
   interactive applications simple as you no longer need to panic about data pushing or pulling between the component and the template.
   Listed below are the four types of data binding in Angular:
 
-  Event binding
-  Property binding
-  String interpolation
+  Event binding,
+  Property binding,
+  String interpolation,
   Two-way data binding
 # What do you mean by string interpolation?
   String interpolation in Angular, also known as the mustache syntax, only allows one-way data binding. It is a special syntax that makes use of double curly braces {{}} so that 
   it can display the component data.
 # What are the differences between Angular decorator and annotation?
-  In Angular, decorators are design patterns that help in the modification or decoration of the respective classes without making changes in the actual source code.
-  Annotations, on the other hand, are used in Angular to build an annotation array. They use the Reflective Metadata library and are a metadata set of the given class.  
+  Traceur gives us annotations. TypeScript gives us decorators. But Angular 2 supports both.
+
+  Annotations create an "annotations" array. whereas Decorators are functions that receive the decorated object and can make any changes to it they like.
+
+  As angular use TypeScript instead of atScript so it is using decorators. There are basically four kind of decorators are there which are
+
+  Class decorators, e.g. @Component and @NgModule
+  
+  Property decorators for properties inside classes, e.g. @Input and @Output
+  
+  Method decorators for methods inside classes, e.g. @HostListener
+  
+  Parameter decorators for parameters inside class constructors, e.g. @Inject  
 # What is DOM?
   The full form of DOM is Document Object Model, and it is responsible for representing the content of a web page and changes in the architecture of an application. Here, all 
   the objects are organized in the form of a tree, and the document can easily be modified, manipulated, and accessed only with the help of APIs.
