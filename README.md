@@ -49,8 +49,8 @@
 
   ![lifecycle-hooks](https://user-images.githubusercontent.com/40568415/135086330-7161dd54-25ef-40e4-827c-3a95bd59b5f8.png)
 # Why would you use lazy loading modules in Angular app?
-  To load a feature module lazily we need to load it using loadChildren property in route configuration and that feature module must not be imported in application module. Lazy 
-  loading is useful when the application size is growing. In lazy loading, feature module will be loaded on demand and hence application start will be faster.
+  Lazy Loading is the technique of loading the module or data on demand. It helps us to better the application performance and reduce the initial bundle size of our files. The 
+  initial page loads faster and we can also split the application into the logic chunks which can be loaded on demand.
 # What do you mean by data binding?
   Data binding is among the most important and powerful features that help in establishing communication between DOM and the component. It makes the defining process of 
   interactive applications simple as you no longer need to panic about data pushing or pulling between the component and the template.
