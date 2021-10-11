@@ -52,6 +52,46 @@
   }
   // directive usage
   <span highlight>High light content!</span>(*)
+  
+# What are the Services in Angular?
+  In Angular services are the classes with well defined purpose. Services provide the functionality in a modular way which can be reused across the components. To share 
+  the data between components you can use services. You can make your components efficient by delegating some functionality code to services like fetch the data from 
+  server, validation rules etc. By defining this code into services you can make your code reusable to any component. You can create a service by using @Injectable 
+  decorator.  
+# How to make a service a singleton in Angular?
+  First way is - inject the service in root by setting 'providedIn' property to 'root' in @Injectable decorator.
+  Second way is - include the service in AppModule only or in a module that is imported only in AppModule no where else.
+# What is the provider in Angular?
+  In Angular, dependency injection is used to inject the dependencies of services, A Provider works as an instructor for dependency injection system to resolve the 
+  dependencies. When you create any service it comes with a default @Injectable decorator that contains a default property 'providedIn' which creates the provider for 
+  service.  
+# Explain the dependency injection in Angular?
+  Dependency Injection (DI) is a design pattern. Angular provides it's own dependency injection to Angular applications to increase their efficiency and modularity. 
+  Dependency is an object or class that another class needs to complete its operations, for example A 'UserComponent' needs 'UserService' to perform user operations. 
+  Angular DI framework injects the dependencies when it's instantiating the class or component.
+  In angular it's mandatory to create the service with @Injecible decorator. To get injected the service by dependency injection you need to specify providers.  
+    @Injectable({
+    providedIn: 'root', // to inject the dependency in root
+  })
+  export class UserService {
+  }
+
+  //In user component constructor you can inject the dependency like this
+
+  constructor(userService: UserService){}
+# What is RxJS library?
+  RxJS (Reactive Extensions for JavaScript) is a library that uses the observable sequences for asynchronous and event-based or callback-based code. RxJS library has one 
+  core type 'Observable' and satellite types including (Observer, Schedulers, Subjects).
+  RxJS provides many operators to support the below features. 
+# What is the HTTP interceptor?
+  HTTP Interceptor intercepts and handles an HTTP request or response. You create your own interceptor by implementing the HttpInterceptor interface.  
+  
+  In case of multiple interceptors, the first interceptor transforms the request before passing it to next with 'next.handle(transformedReq)' method.
+  To use the same instance of HttpInterceptor for the entire application, import HttpClientModule in your appModule and add the interceptor to the root application 
+  injector. If you want to override this interceptor then specify another interceptor in the feature module.
+What is Transpiling in Angular?
+
+In Angular, Transpiling refers to the process o
 # What is the difference between @ViewChild() and @ContentChild()
   As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, whereas @ViewChild 
   and @ViewChildren only look at elements that are on your view template directly.
