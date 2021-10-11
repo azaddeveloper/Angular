@@ -1,7 +1,57 @@
 
 # What is Angular?
-  Angular is an open-source web application development framework created by Google. It is used to build frontend, single-page applications that run on JavaScript. It is a full-
-  fledged framework, i.e., it takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
+  Angular is an open-source web application development framework created by Google.It is  a development platform to build sophisticated and efficient single page 
+  applications.It takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
+# What are the main building blocks of an Angular Application?
+  NgModule : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
+  properties. Module can contain any components, service providers and other code for that module.
+  You can create a module class using @NgModule decorator with some properties. Module can contain any components, service providers and other code for that module.
+  @NgModule({
+    imports: [],
+    declarations: [],
+    providers: [],
+    bootstrap: [AppComponent],
+  })
+  export class AppModule { }
+  Components - Components define and control the view , it's associated data and logic. 
+  @Component({
+      selector: 'web-portal-home',
+      templateUrl: './home.component.html',
+      styleUrls: ['./home.component.scss'],
+  })
+  export class HomeComponent {
+  }
+  Services - Services are used to share the data across the components. The decorator @Injectable() defines the class just below it as a service that can be injected 
+  as  a dependency.
+  @Injectable()
+  export class UserService {
+  }
+  Dependency Injection - Dependency Injection is a design pattern that is used to resolve the dependencies in different classes or components. you can inject the service 
+  in a component's constructor as below.
+  constructor(private service: UserService) { }
+  Routing - Angular provides a RouterModule to handle the navigation between the states and view of application.
+
+# What is the host view in Angular?
+  When a component is created it's directly associated with a single view that is called host view.
+
+# What are the directives? How many types of directives are available in Angular?
+  Directives provide the Program logic and extend the power of HTML by providing new syntax.
+  Angular supports 3 types of directives as below.
+  Components - These are the directives with templates.
+  Structure directives - You can change DOM structure by adding or removing the elements. we use asterisk (*) as a prefix to the directive name. Structure directive  
+  examples are *ngIf, *ngFor etc.
+  Attribute directives - When you want to change the appearance or behavior of a DOM element, you can use attribute directive. Attribute directive example.
+    import { Directive, ElementRef } from '@angular/core';
+      @Directive({
+      selector: '[highlight]'
+      })
+      export class HighlightDirective {
+          constructor(el: ElementRef) {
+          el.nativeElement.style.backgroundColor = 'yellow';
+      }
+  }
+  // directive usage
+  <span highlight>High light content!</span>(*)
 # What is the difference between @ViewChild() and @ContentChild()
   As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, whereas @ViewChild 
   and @ViewChildren only look at elements that are on your view template directly.
@@ -11,7 +61,11 @@
   The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses.
   ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
   implementing OnInit is not mandatory but considered good practice).
-# What is AOT?
+# Explain the AOT compilation? Or What is the difference between JIT and AOT?
+  JIT - Just-in-Time (JIT), it compiles the application at runtime in the browser. JIT is the default compiler in angular. When you run ng-build or ng-server it will 
+  compile your application.
+  AOT - Ahead-of-Time (AOT), it compiles the application at build time. AOT compiler converts all HTML and TypeScript code into JavaScript code during build before 
+  browsers start downloading JavaScript code. It makes rendering faster.
 # What is difference between declarations, providers and import in NgModule?
   imports are used to import supporting modules like FormsModule, RouterModule, CommonModule, or any other custom-made feature module.
   
@@ -90,11 +144,15 @@
   Two-way data binding is done in Angular to ensure that the data model is automatically synchronized in the view. For example, when a user updates some data in a model and that 
   model is being displayed in multiple places in a component, that update should be reflected in all the places  
 # What are pipes in Angular?
-  When we are trying to output some dynamic data in our templates, we may sometimes need to manipulate or transform the data before it is put into our templates. Though there 
-  are several ways of doing that, in Angular, using pipes is the most preferred way. A pipe is just a simple function, which we can use with expressions in our templates. 
-
-  Pipes are extremely useful as we can use them throughout our application after declaring them just once and registering them with the Angular framework. Some of the most 
-  common built-in pipes in Angular are UpperCasePipe, LowerCasePipe, CurrencyPipe, etc.  
+  A Pipe provides the functionality of transforming the data from your data input to desired output. For example, You receive some lower case data from the back end and 
+  now you want to display that data as upper case then you can Angular built in pipe 'uppercase'. You can also create your custom pipes in angular.
+  To implement a custom pipe, decorate your class with '@Pipe' metadata and implement PipeTransform interface's transform method as below.
+  @Pipe({name: 'exponentialStrength'})
+  export class ExponentialPipe implements PipeTransform {
+    transform(value: number, exponent?: number): number {
+      return Math.pow(value, isNaN(exponent) ? 1 : exponent);
+    }
+  }
 # What are observables in Angular?
   An observable is a declarative way using which we can perform asynchronous tasks. Observables can be thought of as streams of data flowing from a publisher to a subscriber. 
   They are similar to promises as they both deal with handling asynchronous requests. # However, observables are considered to be a better alternative to promises as the former 
