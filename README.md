@@ -2,7 +2,7 @@
 # What is Angular?
   > Angular is an open-source web application development framework created by Google.It is  a development platform to build sophisticated and efficient single page applications.It takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
 # What are the main building blocks of an Angular Application?
-  > NgModule : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
+  > **NgModule** : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
   properties. Module can contain any components, service providers and other code for that module.
   You can create a module class using @NgModule decorator with some properties. Module can contain any components, service providers and other code for that module.
   ```
@@ -14,7 +14,8 @@
   })
   export class AppModule { }
   ```
-  Components - Components define and control the view , it's associated data and logic. 
+  **Components** - Components define and control the view , it's associated data and logic. 
+  ```
   @Component({
       selector: 'web-portal-home',
       templateUrl: './home.component.html',
@@ -22,16 +23,20 @@
   })
   export class HomeComponent {
   }
-  
-  Services - Services are used to share the data across the components. The decorator @Injectable() defines the class just below it as a service that can be injected 
+  ```
+  **Services** - Services are used to share the data across the components. The decorator @Injectable() defines the class just below it as a service that can be injected 
   as  a dependency.
+  ```
   @Injectable()
   export class UserService {
   }
-  Dependency Injection - Dependency Injection is a design pattern that is used to resolve the dependencies in different classes or components. you can inject the service 
+  ```
+  **Dependency Injection** - Dependency Injection is a design pattern that is used to resolve the dependencies in different classes or components. you can inject the service 
   in a component's constructor as below.
+  ```
   constructor(private service: UserService) { }
-  Routing - Angular provides a RouterModule to handle the navigation between the states and view of application.
+  ```
+  **Routing** - Angular provides a RouterModule to handle the navigation between the states and view of application.
 
 # What is the host view in Angular?
   When a component is created it's directly associated with a single view that is called host view.
