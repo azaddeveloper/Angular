@@ -63,7 +63,7 @@
     }
     // directive usage
     <span highlight>High light content!</span>(*)
-```
+  ```
 # What are the Services in Angular?
   In Angular services are the classes with well defined purpose. Services provide the functionality in a modular way which can be reused across the components. To share 
   the data between components you can use services. You can make your components efficient by delegating some functionality code to services like fetch the data from 
@@ -81,7 +81,7 @@
   Dependency is an object or class that another class needs to complete its operations, for example A 'UserComponent' needs 'UserService' to perform user operations. 
   Angular DI framework injects the dependencies when it's instantiating the class or component.
   In angular it's mandatory to create the service with @Injecible decorator. To get injected the service by dependency injection you need to specify providers.  
-    ```
+   ```
     @Injectable({
       providedIn: 'root', // to inject the dependency in root
     })
@@ -89,33 +89,32 @@
     } 
     //In user component constructor you can inject the dependency like this
     constructor(userService: UserService){}
-    ```
+   ```
 # What is RxJS library?
   RxJS (Reactive Extensions for JavaScript) is a library that uses the observable sequences for asynchronous and event-based or callback-based code. RxJS library has one 
   core type 'Observable' and satellite types including (Observer, Schedulers, Subjects).
   RxJS provides many operators to support the below features. 
 # What is the HTTP interceptor?
   HTTP Interceptor intercepts and handles an HTTP request or response. You create your own interceptor by implementing the HttpInterceptor interface.  
-  
   In case of multiple interceptors, the first interceptor transforms the request before passing it to next with 'next.handle(transformedReq)' method.
   To use the same instance of HttpInterceptor for the entire application, import HttpClientModule in your appModule and add the interceptor to the root application 
   injector. If you want to override this interceptor then specify another interceptor in the feature module.
-What is Transpiling in Angular?
-
-In Angular, Transpiling refers to the process o
+# What is Transpiling in Angular?
+  In Angular, Transpiling refers to the process o
 # What is the difference between @ViewChild() and @ContentChild()
   As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, whereas @ViewChild 
   and @ViewChildren only look at elements that are on your view template directly.
 # How would you insert an embedded view from a prepared TemplateRef?
   we can create an embedded view using createEmbeddedView method then attach that view to the DOM via ViewContainerRef:
 # Explain the difference between Constructor and ngOnInit
-  The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses.
+  The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its 
+  subclasses.
   ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
   implementing OnInit is not mandatory but considered good practice).
 # Explain the AOT compilation? Or What is the difference between JIT and AOT?
-  JIT - Just-in-Time (JIT), it compiles the application at runtime in the browser. JIT is the default compiler in angular. When you run ng-build or ng-server it will 
+  **JIT - Just-in-Time (JIT)**, it compiles the application at runtime in the browser. JIT is the default compiler in angular. When you run ng-build or ng-server it will 
   compile your application.
-  AOT - Ahead-of-Time (AOT), it compiles the application at build time. AOT compiler converts all HTML and TypeScript code into JavaScript code during build before 
+  **AOT - Ahead-of-Time (AOT)**, it compiles the application at build time. AOT compiler converts all HTML and TypeScript code into JavaScript code during build before 
   browsers start downloading JavaScript code. It makes rendering faster.
 # What is difference between declarations, providers and import in NgModule?
   imports are used to import supporting modules like FormsModule, RouterModule, CommonModule, or any other custom-made feature module.
@@ -127,13 +126,16 @@ In Angular, Transpiling refers to the process o
   Providers are used for injecting the services required by components, directives, pipes in the module.
 
 # How to detect a route change in Angular?  
+  ```
   class MyClass {
     constructor(private router: Router) {
         router.subscribe((val) => /*whatever*/ )
     }
   }
+ ``` 
 # What are the lifecycle hooks for components and directives?
-  A component in Angular has a life-cycle, a number of different phases it goes through from birth to death. We can hook into those different phases to get some pretty fine 
+  A component in Angular has a life-cycle, a number of different phases it goes through from birth to death. We can hook into those different phases to get some pretty
+  fine 
   grained control of our application.
 
   constructor This is invoked when Angular creates a component or directive by calling new on the class.
@@ -144,7 +146,8 @@ In Angular, Transpiling refers to the process o
   
   ngDoCheck Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.
   
-  ngOnDestroy This method will be invoked just before Angular destroys the component. Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks.
+  ngOnDestroy This method will be invoked just before Angular destroys the component. Use this hook to unsubscribe observables and detach event handlers to avoid memory 
+  leaks.
   These hooks are only called for components and not directives.
 
   ngAfterContentInit Invoked after Angular performs any content projection into the components view (see the previous lecture on Content Projection for more info).
@@ -157,20 +160,20 @@ In Angular, Transpiling refers to the process o
 
   ![lifecycle-hooks](https://user-images.githubusercontent.com/40568415/135086330-7161dd54-25ef-40e4-827c-3a95bd59b5f8.png)
 # Why would you use lazy loading modules in Angular app?
-  Lazy Loading is the technique of loading the module or data on demand. It helps us to better the application performance and reduce the initial bundle size of our files. The 
-  initial page loads faster and we can also split the application into the logic chunks which can be loaded on demand.
+  Lazy Loading is the technique of loading the module or data on demand. It helps us to better the application performance and reduce the initial bundle size of our 
+  files. The initial page loads faster and we can also split the application into the logic chunks which can be loaded on demand.
 # What do you mean by data binding?
   Data binding is among the most important and powerful features that help in establishing communication between DOM and the component. It makes the defining process of 
   interactive applications simple as you no longer need to panic about data pushing or pulling between the component and the template.
   Listed below are the four types of data binding in Angular:
 
-  Event binding,
-  Property binding,
-  String interpolation,
-  Two-way data binding
+  - Event binding,
+  - Property binding,
+  - String interpolation,
+  - Two-way data binding
 # What do you mean by string interpolation?
-  String interpolation in Angular, also known as the mustache syntax, only allows one-way data binding. It is a special syntax that makes use of double curly braces {{}} so that 
-  it can display the component data.
+  String interpolation in Angular, also known as the mustache syntax, only allows one-way data binding. It is a special syntax that makes use of double curly braces {{}} 
+  so that it can display the component data.
 # What are the differences between Angular decorator and annotation?
   Traceur gives us annotations. TypeScript gives us decorators. But Angular 2 supports both.
 
