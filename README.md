@@ -45,7 +45,8 @@
   Directives provide the Program logic and extend the power of HTML by providing new syntax.
   Angular supports 3 types of directives as below.
   **Components** - These are the directives with templates.
-  **Structure directives** - You can change DOM structure by adding or removing the elements. we use asterisk (*) as a prefix to the directive name. Structure directive    examples are *ngIf, *ngFor etc.
+  **Structure directives** - You can change DOM structure by adding or removing the elements. we use asterisk as a prefix to the directive name. Structure directive    
+    examples are ngIf, ngFor etc.
   **Attribute directives** - When you want to change the appearance or behavior of a DOM element, you can use attribute directive. Attribute directive example.
     ```
     import { Directive, ElementRef } from '@angular/core';
@@ -59,7 +60,7 @@
   }
  // directive usage
   <span highlight>High light content!</span>(*)
- ``` 
+``
 # What are the Services in Angular?
   In Angular services are the classes with well defined purpose. Services provide the functionality in a modular way which can be reused across the components. To share 
   the data between components you can use services. You can make your components efficient by delegating some functionality code to services like fetch the data from 
