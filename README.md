@@ -5,6 +5,7 @@
   > NgModule : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
   properties. Module can contain any components, service providers and other code for that module.
   You can create a module class using @NgModule decorator with some properties. Module can contain any components, service providers and other code for that module.
+  
   > @NgModule({
     imports: [],
     declarations: [],
@@ -12,6 +13,7 @@
     bootstrap: [AppComponent],
   })
   export class AppModule { }
+  
   Components - Components define and control the view , it's associated data and logic. 
   @Component({
       selector: 'web-portal-home',
@@ -20,6 +22,7 @@
   })
   export class HomeComponent {
   }
+  
   Services - Services are used to share the data across the components. The decorator @Injectable() defines the class just below it as a service that can be injected 
   as  a dependency.
   @Injectable()
