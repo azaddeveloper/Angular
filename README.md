@@ -6,7 +6,7 @@
   properties. Module can contain any components, service providers and other code for that module.
   You can create a module class using @NgModule decorator with some properties. Module can contain any components, service providers and other code for that module.
   
-  > @NgModule({
+  - @NgModule({
     imports: [],
     declarations: [],
     providers: [],
