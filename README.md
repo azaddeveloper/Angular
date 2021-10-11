@@ -44,12 +44,15 @@
 # What are the directives? How many types of directives are available in Angular?
   Directives provide the Program logic and extend the power of HTML by providing new syntax.
   Angular supports 3 types of directives as below.
+  
   **Components** - These are the directives with templates.
-  **Structure directives** - You can change DOM structure by adding or removing the elements. we use asterisk as a prefix to the directive name. Structure directive    
+ 
+ **Structure directives** - You can change DOM structure by adding or removing the elements. we use asterisk as a prefix to the directive name. Structure directive    
     examples are ngIf, ngFor etc.
-  **Attribute directives** - When you want to change the appearance or behavior of a DOM element, you can use attribute directive. Attribute directive example.
-    ```
-    import { Directive, ElementRef } from '@angular/core';
+ 
+ **Attribute directives** - When you want to change the appearance or behavior of a DOM element, you can use attribute directive. Attribute directive example.
+   ```
+   import { Directive, ElementRef } from '@angular/core';
       @Directive({
       selector: '[highlight]'
       })
@@ -57,10 +60,10 @@
           constructor(el: ElementRef) {
           el.nativeElement.style.backgroundColor = 'yellow';
       }
-  }
- // directive usage
-  <span highlight>High light content!</span>(*)
-``
+    }
+    // directive usage
+    <span highlight>High light content!</span>(*)
+```
 # What are the Services in Angular?
   In Angular services are the classes with well defined purpose. Services provide the functionality in a modular way which can be reused across the components. To share 
   the data between components you can use services. You can make your components efficient by delegating some functionality code to services like fetch the data from 
@@ -78,15 +81,15 @@
   Dependency is an object or class that another class needs to complete its operations, for example A 'UserComponent' needs 'UserService' to perform user operations. 
   Angular DI framework injects the dependencies when it's instantiating the class or component.
   In angular it's mandatory to create the service with @Injecible decorator. To get injected the service by dependency injection you need to specify providers.  
+    ```
     @Injectable({
-    providedIn: 'root', // to inject the dependency in root
-  })
-  export class UserService {
-  }
-
-  //In user component constructor you can inject the dependency like this
-
-  constructor(userService: UserService){}
+      providedIn: 'root', // to inject the dependency in root
+    })
+    export class UserService {
+    } 
+    //In user component constructor you can inject the dependency like this
+    constructor(userService: UserService){}
+    ```
 # What is RxJS library?
   RxJS (Reactive Extensions for JavaScript) is a library that uses the observable sequences for asynchronous and event-based or callback-based code. RxJS library has one 
   core type 'Observable' and satellite types including (Observer, Schedulers, Subjects).
