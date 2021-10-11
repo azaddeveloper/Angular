@@ -2,7 +2,7 @@
 # What is Angular?
   > Angular is an open-source web application development framework created by Google.It is  a development platform to build sophisticated and efficient single page applications.It takes care of many aspects of frontend web applications such as HTTP requests, routing, layout, forms, reactivity, validation, etc.
 # What are the main building blocks of an Angular Application?
-  NgModule : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
+  > NgModule : Angular application is a set of NgModules as angular supports modular programming.You can create a module class using @NgModule decorator with some 
   properties. Module can contain any components, service providers and other code for that module.
   You can create a module class using @NgModule decorator with some properties. Module can contain any components, service providers and other code for that module.
   @NgModule({
