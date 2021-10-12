@@ -103,6 +103,8 @@
   Transpiling is the one o the process to convert the typescript into javascript. We can do this by using Traceur, a JS compiler.
 # What is the use of trackBy in ngFor?
   The trackBy function takes the index and the current item as arguments and needs to return the unique identifier for this item. Now when you change the collection, Angular can   track which items have been added or removed according to the unique identifier and create or destroy only the items that changed.
+# Why we use async pipe with ngFor?   
+  The async pipe gives the latest value from an observable. In this case (as in other cases) it will refresh the data involved when a new value comes down the observable. So if   the screen renders and the observable updates the ngFor will re-render.
 # What is the difference between @ViewChild() and @ContentChild()
   As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, 
   whereas @ViewChild and @ViewChildren only look at elements that are on your view template directly.
