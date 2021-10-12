@@ -70,8 +70,8 @@
   server, validation rules etc. By defining this code into services you can make your code reusable to any component. You can create a service by using @Injectable 
   decorator.  
 # How to make a service a singleton in Angular?
-  First way is - inject the service in root by setting 'providedIn' property to 'root' in @Injectable decorator.
-  Second way is - include the service in AppModule only or in a module that is imported only in AppModule no where else.
+  - First way is - inject the service in root by setting 'providedIn' property to 'root' in @Injectable decorator.
+  - Second way is - include the service in AppModule only or in a module that is imported only in AppModule no where else.
 # What is the provider in Angular?
   In Angular, dependency injection is used to inject the dependencies of services, A Provider works as an instructor for dependency injection system to resolve the 
   dependencies. When you create any service it comes with a default @Injectable decorator that contains a default property 'providedIn' which creates the provider for 
@@ -100,30 +100,32 @@
   To use the same instance of HttpInterceptor for the entire application, import HttpClientModule in your appModule and add the interceptor to the root application 
   injector. If you want to override this interceptor then specify another interceptor in the feature module.
 # What is Transpiling in Angular?
-  In Angular, Transpiling refers to the process o
+  Transpiling is the one o the process to convert the typescript into javascript. We can do this by using Traceur, a JS compiler.
+# What is the use of trackBy in ngFor?
+  The trackBy function takes the index and the current item as arguments and needs to return the unique identifier for this item. Now when you change the collection, Angular can   track which items have been added or removed according to the unique identifier and create or destroy only the items that changed.
 # What is the difference between @ViewChild() and @ContentChild()
-  As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, whereas @ViewChild 
-  and @ViewChildren only look at elements that are on your view template directly.
+  As the name suggests, @ContentChild and @ContentChildren queries will return directives existing inside the <ng-content></ng-content> element of your view, 
+  whereas @ViewChild and @ViewChildren only look at elements that are on your view template directly.
 # How would you insert an embedded view from a prepared TemplateRef?
   we can create an embedded view using createEmbeddedView method then attach that view to the DOM via ViewContainerRef:
 # Explain the difference between Constructor and ngOnInit
-  The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its 
+  - Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its 
   subclasses.
-  ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
+  - ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component. We have to import OnInit in order to use like this (actually    
   implementing OnInit is not mandatory but considered good practice).
 # Explain the AOT compilation? Or What is the difference between JIT and AOT?
-  **JIT - Just-in-Time (JIT)**, it compiles the application at runtime in the browser. JIT is the default compiler in angular. When you run ng-build or ng-server it will 
+  - **JIT - Just-in-Time (JIT)**, it compiles the application at runtime in the browser. JIT is the default compiler in angular. When you run ng-build or ng-server it will 
   compile your application.
-  **AOT - Ahead-of-Time (AOT)**, it compiles the application at build time. AOT compiler converts all HTML and TypeScript code into JavaScript code during build before 
+  - **AOT - Ahead-of-Time (AOT)**, it compiles the application at build time. AOT compiler converts all HTML and TypeScript code into JavaScript code during build before 
   browsers start downloading JavaScript code. It makes rendering faster.
 # What is difference between declarations, providers and import in NgModule?
-  imports are used to import supporting modules like FormsModule, RouterModule, CommonModule, or any other custom-made feature module.
+  **imports** are used to import supporting modules like FormsModule, RouterModule, CommonModule, or any other custom-made feature module.
   
-  declarations are used to declare components, directives, pipes that belong to the current module. Everyone inside declarations knows each other. 
+  **declarations** are used to declare components, directives, pipes that belong to the current module. Everyone inside declarations knows each other. 
   
-  components or pipes are only matched against the HTML if they are declared or imported.
+  **components** or pipes are only matched against the HTML if they are declared or imported.
 
-  Providers are used for injecting the services required by components, directives, pipes in the module.
+  **Providers** are used for injecting the services required by components, directives, pipes in the module.
 
 # How to detect a route change in Angular?  
   ```
@@ -138,25 +140,25 @@
   fine 
   grained control of our application.
 
-  constructor This is invoked when Angular creates a component or directive by calling new on the class.
+  - constructor This is invoked when Angular creates a component or directive by calling new on the class.
   
-  ngOnChanges Invoked every time there is a change in one of th input properties of the component.
+  - ngOnChanges Invoked every time there is a change in one of th input properties of the component.
   
-  ngOnInit Invoked when given component has been initialized. This hook is only called once after the first ngOnChanges
+  - ngOnInit Invoked when given component has been initialized. This hook is only called once after the first ngOnChanges
   
-  ngDoCheck Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.
+  - ngDoCheck Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.
   
-  ngOnDestroy This method will be invoked just before Angular destroys the component. Use this hook to unsubscribe observables and detach event handlers to avoid memory 
+  - ngOnDestroy This method will be invoked just before Angular destroys the component. Use this hook to unsubscribe observables and detach event handlers to avoid memory 
   leaks.
   These hooks are only called for components and not directives.
 
-  ngAfterContentInit Invoked after Angular performs any content projection into the components view (see the previous lecture on Content Projection for more info).
+  - ngAfterContentInit Invoked after Angular performs any content projection into the components view (see the previous lecture on Content Projection for more info).
   
-  ngAfterContentChecked Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.
+  - ngAfterContentChecked Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.
   
-  ngAfterViewInit Invoked when the component’s view has been fully initialized.
+  - ngAfterViewInit Invoked when the component’s view has been fully initialized.
   
-  ngAfterViewChecked Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.
+  - ngAfterViewChecked Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.
 
   ![lifecycle-hooks](https://user-images.githubusercontent.com/40568415/135086330-7161dd54-25ef-40e4-827c-3a95bd59b5f8.png)
 # Why would you use lazy loading modules in Angular app?
@@ -191,12 +193,12 @@
 # What is DOM?
   The full form of DOM is Document Object Model, and it is responsible for representing the content of a web page and changes in the architecture of an application. Here, all 
   the objects are organized in the form of a tree, and the document can easily be modified, manipulated, and accessed only with the help of APIs.
-# What are services in Angular?
-  The main objective of a service is to organize and share business logic, models, or data and functions with different components of an Angular application.
- 
+
 # What is a two-way data binding?
   Two-way data binding is done in Angular to ensure that the data model is automatically synchronized in the view. For example, when a user updates some data in a model and that 
-  model is being displayed in multiple places in a component, that update should be reflected in all the places  
+  model is being displayed in multiple places in a component, that update should be reflected in all the places .
+# How to create two way data binding in Angular?
+  https://github.com/Yonet/Angular-Interview-Questions/blob/main/components.md  
 # What are pipes in Angular?
   A Pipe provides the functionality of transforming the data from your data input to desired output. For example, You receive some lower case data from the back end and 
   now you want to display that data as upper case then you can Angular built in pipe 'uppercase'. You can also create your custom pipes in angular.
@@ -218,19 +220,10 @@
 
   A promise is just a way to wrap asynchronous operations so that they can be easily used, while an observable is a way to turn asynchronous operations into a stream of data 
   that flows from a publisher to a subscriber through a well-defined path with multiple operations transforming the data along the way.
-# What is RxJS?
+
 # What is the difference between an observable and a subject?
   While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast. A Subject is like an Observable, but 
   can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
-# How would you cache an observable data?
-
-# What do you mean by dependency injection?
-# What is server-side rendering in Angular?
-# What is Angular Universal?
-# What are HttpInterceptors in Angular?
-  Interceptors are a unique type of Angular Service that we can implement. Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient 
-# How to create two way data binding in Angular?
-  https://github.com/Yonet/Angular-Interview-Questions/blob/main/components.md
 # What is the difference between a component and a directive?
   Component is used to break up the application into smaller components. But Directive is used to design re-usable components, which is more behavior-oriented. That is why   
   components are widely used in later versions of Angular to make things easy and build a total component-based model.
@@ -255,6 +248,8 @@
 # What is the correct form control class name which is set to true when value is modified?
 # What is the difference between a module's forRoot() and forChild() methods and why do you need it?
 # What is a pure pipe?
+# What is server-side rendering in Angular?
+# What is Angular Universal?
   https://github.com/Yonet/Angular-Interview-Questions/blob/main/pipes.md
 # What is the difference between RouterModule.forRoot() vs RouterModule.forChild()? Why is it important?
   https://github.com/Yonet/Angular-Interview-Questions/blob/main/router.md  
