@@ -199,18 +199,21 @@
 # What is a two-way data binding?
   Two-way data binding is done in Angular to ensure that the data model is automatically synchronized in the view. For example, when a user updates some data in a model and that 
   model is being displayed in multiple places in a component, that update should be reflected in all the places .
-# How to create two way data binding in Angular?
   https://github.com/Yonet/Angular-Interview-Questions/blob/main/components.md  
+
 # What are pipes in Angular?
   A Pipe provides the functionality of transforming the data from your data input to desired output. For example, You receive some lower case data from the back end and 
   now you want to display that data as upper case then you can Angular built in pipe 'uppercase'. You can also create your custom pipes in angular.
   To implement a custom pipe, decorate your class with '@Pipe' metadata and implement PipeTransform interface's transform method as below.
+  ```
   @Pipe({name: 'exponentialStrength'})
   export class ExponentialPipe implements PipeTransform {
     transform(value: number, exponent?: number): number {
       return Math.pow(value, isNaN(exponent) ? 1 : exponent);
     }
   }
+  ```
+  https://github.com/Yonet/Angular-Interview-Questions/blob/main/pipes.md
 # What are observables in Angular?
   An observable is a declarative way using which we can perform asynchronous tasks. Observables can be thought of as streams of data flowing from a publisher to a subscriber. 
   They are similar to promises as they both deal with handling asynchronous requests. # However, observables are considered to be a better alternative to promises as the former 
@@ -238,6 +241,11 @@
 
   component uses @Component decorator, directive uses @Directive decorator
   component has template, directive has not  
+
+# What is the difference between RouterModule.forRoot() vs RouterModule.forChild()? Why is it important?
+  https://github.com/Yonet/Angular-Interview-Questions/blob/main/router.md 
+  
+  
 # Forms Questions:
 # When do you use template driven vs model driven forms? Why?
 # How do you submit a form?
@@ -253,6 +261,5 @@
 # What is server-side rendering in Angular?
 # What is Angular Universal?
   https://github.com/Yonet/Angular-Interview-Questions/blob/main/pipes.md
-# What is the difference between RouterModule.forRoot() vs RouterModule.forChild()? Why is it important?
-  https://github.com/Yonet/Angular-Interview-Questions/blob/main/router.md  
+ 
   
