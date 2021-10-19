@@ -99,6 +99,16 @@
   In case of multiple interceptors, the first interceptor transforms the request before passing it to next with 'next.handle(transformedReq)' method.
   To use the same instance of HttpInterceptor for the entire application, import HttpClientModule in your appModule and add the interceptor to the root application 
   injector. If you want to override this interceptor then specify another interceptor in the feature module.
+# How to protect routes from unauthorized users in Angular?
+  We can use the guard in angular to protect routes. The Auth Guard has two methods canActivate and canActivateChildren, both returns a boolean based on the authentication 
+  condition we have, for example, we can check whether there is a token stored in service or localStorage.
+
+  - The canActivate method – protect the particular route, where we add the auth guard in the route declaration.
+  - The canActivateChildren – protect the child routes of a route where we add the auth guard in the route declaration.
+  - CanDeactivate - It use to checks to see if a user can exit a route.
+  - Resolve - It use to perform route data retrieval before route activation.
+  - CanLoad - It use to checks  to see if a user can route to a module that lazy loaded
+  
 # What is Transpiling in Angular?
   Transpiling is the one o the process to convert the typescript into javascript. We can do this by using Traceur, a JS compiler.
 # What is the use of trackBy in ngFor?
